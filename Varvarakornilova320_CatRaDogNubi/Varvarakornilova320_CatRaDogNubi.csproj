@@ -108,6 +108,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ObshPhotos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\VhodPages.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,6 +120,9 @@
   <ItemGroup>
     <Compile Include="Pages\DobavitInfoPat.xaml.cs">
       <DependentUpon>DobavitInfoPat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ObshPhotos.xaml.cs">
+      <DependentUpon>ObshPhotos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\VhodPages.xaml.cs">
       <DependentUpon>VhodPages.xaml</DependentUpon>

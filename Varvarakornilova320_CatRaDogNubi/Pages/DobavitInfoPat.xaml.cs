@@ -70,8 +70,19 @@ namespace Varvarakornilova320_CatRaDogNubi.Pages
 
                 DbConnection.CatRaDogNubiEntities.Information.Add(info);
                 DbConnection.CatRaDogNubiEntities.SaveChanges();
-                
+
+                Refresh();
             }
+        }
+
+        private void Refresh()
+        {
+            petinfo_list.ItemsSource = Varvarakornilova320_CatRaDogNubi.DB.DbConnection.CatRaDogNubiEntities.Information.ToList();
+        }
+
+        private void obsh_photos_btn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.ObshPhotos());
         }
     }
 }
