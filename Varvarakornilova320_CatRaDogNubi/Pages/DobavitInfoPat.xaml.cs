@@ -41,10 +41,16 @@ namespace Varvarakornilova320_CatRaDogNubi.Pages
             info.Insert(0, new Information() { ID_info = -1 });
 
 
-            //var users = DbConnection.CatRaDogNubiEntities.User.ToList();
-            //var user = users.FirstOrDefault(u => u.ID_user == 1);
-            //if (users.Id == 1 )
-            petinfo_list.ItemsSource = Varvarakornilova320_CatRaDogNubi.DB.DbConnection.CatRaDogNubiEntities.Information.ToList()/*.Where(i => i.ID_pet == 1)*/;
+            var users = DbConnection.CatRaDogNubiEntities.User.ToList();
+            var user = users.FirstOrDefault(u => u.ID_user == 1);
+            if (user.ID_user == 1 )
+            {
+                petinfo_list.ItemsSource = Varvarakornilova320_CatRaDogNubi.DB.DbConnection.CatRaDogNubiEntities.Information.ToList().Where(i => i.ID_pet == 1);
+            }
+            else if(user.ID_user == 2)
+            {
+                petinfo_list.ItemsSource = Varvarakornilova320_CatRaDogNubi.DB.DbConnection.CatRaDogNubiEntities.Information.ToList().Where(i => i.ID_pet == 2);
+            }
 
 
             this.DataContext = this;
