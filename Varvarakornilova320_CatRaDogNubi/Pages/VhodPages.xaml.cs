@@ -34,8 +34,16 @@ namespace Varvarakornilova320_CatRaDogNubi.Pages
 
             var users = DbConnection.CatRaDogNubiEntities.User.ToList();
             var user = users.FirstOrDefault(u => u.Login_user == login && u.Password_user == password);
-            if (user != null)
+            if (user != null && user.ID_user ==1)
+            {
+                MessageBox.Show($"Добро пожаловать! {user.Name_user}");
                 NavigationService.Navigate(new Pages.DobavitInfoPat());
+            }
+            else if (user != null && user.ID_user == 2)
+            {
+                MessageBox.Show($"Добро пожаловать! {user.Name_user}");
+                NavigationService.Navigate(new Pages.DobavitInfoPat());
+            }
             else
                 MessageBox.Show("Введенные данные некорректны!");
         }
