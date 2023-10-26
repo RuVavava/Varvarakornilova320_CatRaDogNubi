@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f76fb3c3fa04c3e9626b176fe0c5254" Name="Diagram1">
+        <EntityTypeShape EntityType="VarvaraKornilova320_CatRaDogNubiModel.Information" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VarvaraKornilova320_CatRaDogNubiModel.Pet" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VarvaraKornilova320_CatRaDogNubiModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VarvaraKornilova320_CatRaDogNubiModel.User" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="VarvaraKornilova320_CatRaDogNubiModel.FK_Information_Pet" ManuallyRouted="false" />
+        <AssociationConnector Association="VarvaraKornilova320_CatRaDogNubiModel.FK_Pet_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

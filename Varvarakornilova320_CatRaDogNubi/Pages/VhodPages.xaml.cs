@@ -1,4 +1,5 @@
 ﻿using System;
+using Varvarakornilova320_CatRaDogNubi.DB;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,23 @@ namespace Varvarakornilova320_CatRaDogNubi.Pages
     /// </summary>
     public partial class VhodPages : Page
     {
+        public static List<User> users { get; set; }
         public VhodPages()
         {
             InitializeComponent();
+        }
+
+        private void vhod_btn_Click(object sender, RoutedEventArgs e)
+        {
+            string login = Convert.ToString(login_tb.Text.Trim());
+            string password = Convert.ToString(passoword_tb.Text.Trim());
+
+            var users = DbConnection.CatRaDogNubiEntities.User.ToList();
+            var user = users.FirstOrDefault(u => u.Login_user == login && u.Password_user == password);
+            if (user != null)
+                NavigationService.Navigate(new Pages.DobavitInfoPat());
+            else
+                MessageBox.Show("Введенные данные некорректны!");
         }
     }
 }
