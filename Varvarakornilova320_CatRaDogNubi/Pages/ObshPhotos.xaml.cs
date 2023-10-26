@@ -35,5 +35,31 @@ namespace Varvarakornilova320_CatRaDogNubi.Pages
             obsh_list.ItemsSource = Varvarakornilova320_CatRaDogNubi.DB.DbConnection.CatRaDogNubiEntities.Information.ToList()/*.Where(i => i.ID_pet == 1)*/;
             this.DataContext = this;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var sorting = sorting_cb.Text;
+
+
+            if (sorting == "Сначала новые")
+            {
+                info = Varvarakornilova320_CatRaDogNubi.DB.DbConnection.CatRaDogNubiEntities.Information.OrderByDescending(x => x.ID_info).ToList();
+                this.DataContext = this;
+            }
+            else
+            {
+                info = Varvarakornilova320_CatRaDogNubi.DB.DbConnection.CatRaDogNubiEntities.Information.OrderBy(x => x.ID_info).ToList();
+                this.DataContext = this;
+            }
+
+            obsh_list.ItemsSource = info;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var poisk = poisk_cb.Text;
+            info = info.Where(x => x.Description == poisk).ToList();
+            obsh_list.ItemsSource = info;
+        }
     }
 }

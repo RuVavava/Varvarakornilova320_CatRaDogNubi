@@ -50,7 +50,63 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        
+
+        <ComboBox x:Name="sorting_cb"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="4"
+                   Grid.RowSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width ="200"
+                   Height="25"
+                   FontSize="15"
+                   FontFamily="Courier New">
+            <ComboBoxItem>Сначала новые</ComboBoxItem>
+            <ComboBoxItem>Сначала старые</ComboBoxItem>
+        </ComboBox>
+
+        <TextBox x:Name="poisk_cb"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="4"
+                   Grid.RowSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width ="200"
+                   Height="30"
+                   FontSize="15"
+                   FontFamily="Courier New">
+
+        </TextBox>
+
+        <Button 
+                Grid.Column="4"
+                   Grid.ColumnSpan="4"
+                   Grid.Row="4"
+                   Grid.RowSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width ="60"
+                   Height="30"
+                   FontSize="15"
+                   FontFamily="Courier New" Click="Button_Click">
+            OK
+        </Button>
+
+        <Button
+                Grid.Column="4"
+                   Grid.ColumnSpan="4"
+                   Grid.Row="5"
+                   Grid.RowSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width ="60"
+                   Height="30"
+                   FontSize="15"
+                   FontFamily="Courier New" Click="Button_Click_1">
+            Найти
+        </Button>
+
     </Grid>
 </Page>
