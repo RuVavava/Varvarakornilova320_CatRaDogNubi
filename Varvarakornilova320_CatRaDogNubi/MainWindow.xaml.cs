@@ -23,6 +23,7 @@ namespace Varvarakornilova320_CatRaDogNubi
         public MainWindow()
         {
             InitializeComponent();
+            navigate_frame.NavigationService.Navigate(new Pages.VhodPages());
         }
     }
 }
